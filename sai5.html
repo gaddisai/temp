@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      .card {
+        margin: 20px;
+        border-width: 5px;
+        border-color: black;
+      }
+      .image{ 
+        height: 200px;
+        width: 300px;
+      }
+      .h2{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let products = [
+        {
+          id: 1,
+          name: "Baleno",
+          price: 800000,
+          desc: "White baleno",
+          url: "https://s3.caradvice.com.au/wp-content/uploads/2016/07/2016_suzuki_baleno_07.jpg",
+        },
+        {
+          id: 2,
+          name: "BMW M2",
+          price: 8000000,
+          desc: "White BMW",
+          url: "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/BMW-M-Performance-M2-coupe-white-press-image-1001x565p-(1).jpg",
+        },
+        {
+          id: 3,
+          name: "Mercedes-AMG GT",
+          price: 6500000,
+          desc: "black Mercedes",
+          url: "https://www.supercars.net/blog/wp-content/uploads/2016/09/16C820_016.jpg",
+        },
+      ];
+      //   console.log(products[0])
+      let len = products.length;
+      let str = "<h1 class='h2'>WELCOME TO SALES</h1> <div class='container'> "
+      for (let i = 0; i < len; i++) {
+        str += `<div class="card">
+            <img class="image" src="${products[i].url}">
+            <h2>${products[i].name}</h2>    
+            <p>${products[i].desc}</p>
+            <h3>Rs:${products[i].price}</h3>
+            <button>Buy Now</button>
+            </div>`
+      }
+      str+='</div>'
+      root.innerHTML = str;
+    </script>
+  </body>
+</html>
+  
