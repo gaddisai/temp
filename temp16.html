@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let name=document.getElementById('name').value;
+            let username=document.getElementById('email').value;
+            let password=document.getElementById('pass').value;
+            let dob=document.getElementById('dob').value;
+            data.innerHTML=`${name},${username},${password},${dob}`;
+        }
+    </script>
+    <style>
+        .container{
+            text-align: center;
+            padding: 30px;
+            background-color: red;
+            height: 40vh;
+            width: 30vw;
+        }
+        .h1{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">New User Signup Form</h1>
+        <div class="">
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="email" placeholder="Enter your email" required>
+        </div>
+        <br>
+        <div>
+            <input type="passsword" id="pass" placeholder="Enter your password" required>
+        </div>
+        <br>
+        <div>
+            <input type="date" id="dob" required>
+        </div>
+        <br>
+        <button onclick="f1()">Register</button>
+        <div id="data">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let num=Number(document.getElementById('number').value);
+            let str="";
+            for(let i=1;i<=10;i++){
+                str +=`${num} X ${i} = ${num*i}<br>`;
+            }
+            multi.innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" id="number" placeholder="enter a number">
+    </div>
+    <br>
+    <button onclick="f1()">Submit</button><hr>
+    <div id="multi"></div>
+</body>
+</html>
