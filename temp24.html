@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let doj= new Date(document.getElementById('doj').value)
+            if(doj.getDay()==3){
+                msg.innerHTML="Sorry. We are clossed on wednesday";
+            }else{
+                msg.innerHTML="Welcome";
+            }
+        }
+    </script>
+</head>
+<body>
+        <input type="date" id="doj">
+        <button onclick="f1()">Submit</button>
+        <div id="msg"></div>
+    
+</body>
+</html>
